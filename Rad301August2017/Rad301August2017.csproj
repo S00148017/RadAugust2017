@@ -173,7 +173,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AttendenceModel\AttendDBContext.cs" />
+    <Compile Include="Models\AttendenceModel\Attendence.cs" />
+    <Compile Include="Models\AttendenceModel\Lecturer.cs" />
+    <Compile Include="Models\AttendenceModel\LecturerSubject.cs" />
+    <Compile Include="Models\AttendenceModel\StudentSubject.cs" />
+    <Compile Include="Models\AttendenceModel\Student.cs" />
+    <Compile Include="Models\AttendenceModel\Subject.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -201,7 +209,9 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="sinpits.txt" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -238,6 +248,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Migrations\AttendenceMigrations\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
