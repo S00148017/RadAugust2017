@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Rad301August2017.Models.AttendenceModel.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.studSubjects.StudentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentFName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentLName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.studSubjects.StudentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentFName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentLName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StudentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StudentID })
+        </td>
+    </tr>
+}
+
+</table>

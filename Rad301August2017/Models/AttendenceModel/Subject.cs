@@ -15,6 +15,6 @@ namespace Rad301August2017.Models.AttendenceModel
        public int SubjectID { get; set; }
        public string SubjectName { get; set; }
 
-       
+        public virtual ICollection<Subject> Subjects { get; set; }
     }
 }

@@ -21,6 +21,6 @@ namespace Rad301August2017.Models.AttendenceModel
         [ForeignKey("SubjectID")]
         public virtual Subject subject { get; set; }
 
-        public virtual ICollection<Subject> subjects { get; set; }
+        public virtual ICollection<Subject> studSubjects { get; set; }
     }
 }

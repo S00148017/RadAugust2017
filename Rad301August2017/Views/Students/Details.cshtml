@@ -1,0 +1,42 @@
+﻿@model Rad301August2017.Models.AttendenceModel.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.studSubjects.StudentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.studSubjects.StudentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentFName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentFName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentLName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentLName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
